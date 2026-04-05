@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta name="description" content="Drawing Shapes w/ D3 - "/>
+    <title>Drawing SVG Shapes with D3</title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+<body>
+<h3>SVG Bar</h3>
+<svg>
+    <rect width="50" height="200" style="fill: blue"/>
+</svg>
+
+<h3>SVG Circle</h3>
+<svg width="200" height="200" style="border: 1px solid #333;">
+    <circle
+            cx="75%"
+            cy="50%"
+            r="50"
+            style="fill: mediumvioletred;"
+    />
+</svg>
+
+<h3>D3 Bar</h3>
+<script>
+    d3.select("body") // selects <body> html tag
+        .append("svg") // add an <svg> html element
+        .append("rect") // add <rect> svg element
+        .attr("width", 50) // set the attribute of width
+        .attr("height", 200) // set the attribute of height
+        .style("fill", "blue"); // add some style
+</script>
+
+<h3>D3 Circle</h3>
+<script>
+    d3.select("body")           // select the <body> tag
+        .append("svg")            // add an <svg> element
+        .attr("width", 50)      // set width
+        .attr("height", 200)    // set height
+        .append("circle")         // add a <circle> element
+        .attr("cx", 25)         // x-coordinate of center
+        .attr("cy", 25)         // y-coordinate of center
+        .attr("r", 25)          // radius
+        .style("fill", "purple"); // fill color
+</script>
+
+<h3>Some text</h3>
+<svg width="250" height="50">
+    <text x="0" y="25">Some text</text>
+</svg>
+
+<h3>D3 Text</h3>
+<script>
+    d3.select("body")           // select the <body> tag
+        .append("svg")            // add an <svg> element
+        .attr("width", 250)      // set width
+        .attr("height", 50)    // set height
+        .append("text")         // add a <circle> element
+        .text("Izi Text")
+        .attr("x", 25)         // x-coordinate of center
+        .attr("y", 25)         // y-coordinate of center
+        .style("fill", "red"); // fill color
+</script>
+
+</body>
+</html>
