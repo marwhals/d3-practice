@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Multiple D3 visualizations">
+    <title>Multiple D3 Visualizations</title>
+
+    <!-- Optional: Use a nicer font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            margin: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #4a4a4a;
+        }
+
+        /* Flex container for horizontal layout */
+        .viz-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        svg {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        text {
+            font-size: 12px;
+            fill: #333;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Multiple D3 Visualizations</h1>
+
+<!-- First row of visualizations -->
+<div class="viz-row">
+    <svg id="viz1" width="400" height="200"></svg>
+    <svg id="viz2" width="400" height="200"></svg>
+    <svg id="viz3" width="400" height="200"></svg>
+</div>
+
+<!-- Second row of visualizations -->
+<div class="viz-row">
+    <svg id="viz4" width="400" height="200"></svg>
+    <svg id="viz5" width="400" height="200"></svg>
+    <svg id="viz6" width="400" height="200"></svg>
+</div>
+
+<!-- Each script is a module -->
+<script type="module" src="/src/visualisation_one.js"></script>
+<script type="module" src="/src/visualisation_two.js"></script>
+<script type="module" src="/src/visualisation_three.js"></script>
+<script type="module" src="/src/visualisation_four.js"></script>
+<script type="module" src="/src/visualisation_five.js"></script>
+<script type="module" src="/src/visualisation_six.js"></script>
+
+</body>
+</html>
