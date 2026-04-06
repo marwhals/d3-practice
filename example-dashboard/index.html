@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2013 Sales Dashboard</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='style.css' rel='stylesheet' type='text/css'>
+  <style>
+    /* Container layout */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #08060d;
+    }
+
+    /* Dashboard flex layout */
+    #dashboard {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Top chart section */
+    #topChart {
+      border: 2px solid #e5e4e7;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+      box-sizing: border-box;
+    }
+
+    #topChart h2 {
+      margin: 0 0 10px 0;
+      color: #08060d;
+    }
+
+    #topChart svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    /* Bottom sections layout */
+    #bottomRow {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap; /* Allows stacking on small screens */
+      justify-content: space-between;
+    }
+
+    #bottomLeft,
+    #bottomRight {
+      border: 2px solid #e5e4e7;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+      box-sizing: border-box;
+      flex: 1 1 350px; /* Flex-grow and min-width for responsiveness */
+      min-width: 300px;
+    }
+
+    #bottomLeft h2,
+    #bottomRight h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #08060d;
+    }
+
+    #bottomLeft svg,
+    #bottomRight svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<!--TODO refactor to be modular-->
+<h1 id="dashTitle">2013 Sales Dashboard</h1>
+
+<div id="dashboard">
+  <div id="topChart">
+    <h2>Sales by Month</h2>
+    <svg id="barChartLegend"></svg>
+    <svg id="barChart"></svg>
+  </div>
+
+  <div id="bottomRow">
+    <div id="bottomLeft"></div>
+    <div id="bottomRight">
+      <h2>Sales by State</h2>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
